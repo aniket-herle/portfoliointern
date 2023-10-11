@@ -1,0 +1,131 @@
+.icon{
+    color:#333333 !important;
+}
+.social-icons {
+    display: flex;
+
+    .social {
+      position: relative;
+      border-radius: 50%;
+      width: 50px;
+      height: 50px;
+      font-size: 20pt;
+  
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      background-color: radial-gradient(from 50% 60%, white, #f6f6f6);
+      box-shadow: 0 10px 10px rgba(black, 0.2), 0 -6px 10px rgba(white, 0.6);
+
+      &:not(:last-child) {
+        margin-right: 20px;
+      }
+
+      &.facebook,
+      &.twitter,
+      &.instagram,
+      &.github,
+      &.youtube,
+      &.tiktok {
+        transition: background-color 0.2s ease;
+      }
+
+      &:hover {
+        cursor: pointer;
+
+        &.facebook,
+        &.facebook .tooltip,
+        &.facebook .tooltip:after {
+          background-color: #1877f2;
+        }
+
+        &.twitter,
+        &.twitter .tooltip,
+        &.twitter .tooltip:after {
+          background-color: #1da1f2;
+        }
+
+        &.instagram,
+        &.instagram .tooltip,
+        &.instagram .tooltip:after {
+          background-color: #e4405f;
+        }
+
+        &.github,
+        &.github .tooltip,
+        &.github .tooltip:after {
+          background-color: #333333;
+        }
+
+        &.youtube,
+        &.youtube .tooltip,
+        &.youtube .tooltip:after {
+          background-color: #cd201f;
+        }
+
+        &.tiktok,
+        &.tiktok .tooltip,
+        &.tiktok .tooltip:after {
+          background-color: black;
+        }
+
+        .tooltip {
+          transform: translate(-50%, -250%);
+          opacity: 1;
+        }
+
+        .icon {
+          background: linear-gradient(
+            to bottom,
+            rgba(white, 0.7),
+            rgba(white, 1)
+          );
+          -webkit-background-clip: text;
+        }
+      }
+
+      .tooltip {
+        font-family: "Poppins", sans-serif;
+        font-size: 10pt;
+        font-weight: 900;
+        color: white;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: -1;
+        opacity: 0;
+        padding: 0.2em 0.4em;
+        transition: 0.2s cubic-bezier(0.68, -0.55, 0.265, 1.55);
+        border-radius: 2px;
+
+        &:after {
+          content: "";
+          display: block;
+          width: 6px;
+          height: 6px;
+          transform-origin: center;
+          transform: translate(-50%, -50%) rotate(45deg);
+          position: absolute;
+          top: 100%;
+          left: 50%;
+          z-index: -1;
+        }
+      }
+
+      .icon {
+        height: 1em;
+        display: flex;
+        align-items: center;
+        background: linear-gradient(
+          to bottom,
+          rgba(black, 0.3),
+          rgba(black, 0.2)
+        );
+        -webkit-background-clip: text;
+        color: transparent;
+        transition: 0.2s ease;
+      }
+    }
+  }
+
